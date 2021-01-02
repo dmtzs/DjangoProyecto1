@@ -1,0 +1,14 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title %}
+    {{page.title}}
+{% endblock %}
+
+{% block content %}
+    <h1 class="title">{{ page.title }}</h1>
+    <span class="date">{{page.created_at}}</span>
+    <p class="content">
+        {{page.content|safe}}<!--Lo de |safe es mejor ponerlo siempre sobre todo si se usara algo como ckeditor, esto es para que las etiquetas html
+        que estén directamente sobre el texto guardado sobre la base de datos se pueda interpretar en el navegador de la manera correcta.-->
+    </p>
+{% endblock %}

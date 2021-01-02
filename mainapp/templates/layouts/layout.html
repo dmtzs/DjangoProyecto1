@@ -1,0 +1,61 @@
+{% load static %}<!--Para cargar los estilos de CSS que yo defina dentro de la carpeta static que debe crearse forzosamente-->  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+        | Diego con Django
+    </title>
+    
+    <link rel="stylesheet" href="{% static 'CSS/estilos.css'%}">
+</head>
+<body>
+    <!--Cabecera de la página-->
+    <header>
+        <div id="logotipo">
+            <!--logo django-->
+            <img src="{% static 'Imagenes/logo.png' %}" alt="">
+            <h1>Proyecto con Django</h1>
+        </div>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            {% for i in pages %}
+                <li><a href="{% url 'page' i.2 %}">{{i.1}}</a></li>
+            {% endfor %}
+            
+            {% comment '' %}
+                <span>Se debe poner el nombre que se le puso en name que aparece en las url de urls.py</span>
+                <span>De igual manera para pasar parámetros se hace de la manera en la que se muestra en la url de Contacto</span>
+            {% endcomment %}
+        </ul>
+    </nav>
+
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+    <div id="content">
+        <div class="box">
+            {% block content %}
+                <!--Aquí habrá contenido diferente acorde a la página-->
+                <strong>Contenido dentro de bloque original</strong>
+            {% endblock %}
+        </div>
+    </div>
+    <footer>Master en python &copy; Diego Martínez Sánchez - {% now "d/m/Y" %}</footer>
+</body>
+</html>

@@ -1,0 +1,236 @@
+/*Estilos generales*/
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Arial', 'Vladimir Script';
+    text-decoration: none;
+}
+
+p
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+body
+{
+    background-color: #f2f2f2;
+}
+
+/*Estilos cabecera*/
+header
+{
+    width: 1212px;
+    height: 140px;
+    background-color: #23282b;
+    margin: 0 auto;
+}
+
+#logotipo
+{
+    width: 35%;
+    height: 130px;
+    margin: 0 auto;
+    font-weight: lighter;
+    padding-top: 10px;
+}
+
+#logotipo h1
+{
+    display: block;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    color: #42a096;
+}
+
+#logotipo img
+{
+    display: block;
+    width: 60px;
+    float: left;
+    margin-top: 20px;
+}
+
+/*Estilos barra de navegación*/
+nav
+{
+    width: 1250px;
+    height: 40px;
+    background-color: #1B1E1F;
+    border: 1px solid #333333;
+    margin: 0 auto;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 0px;
+    box-shadow: 0px 22px 22px gray;
+    font-size: 13px;
+}
+
+nav ul
+{
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li
+{
+    line-height: 40px;
+    float: left;
+}
+
+nav ul li a
+{
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #d1d4d6;
+}
+
+nav ul li a:hover
+{
+    background: #42a096;
+    box-shadow: 0px 0px 5px black inset;
+    transition: all 300ms;
+}
+
+.barra
+{
+    width: 1250px;
+    margin-left: 25%;
+}
+
+.esquina-izquierda
+{
+    display: block;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #2b2f30;
+    float: left;
+}
+
+.esquina-derecha
+{
+    display: block;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #2b2f30;
+    float: right;
+}
+
+.relleno-barra
+{
+    display: block;
+    width: 1210px;
+    height: 10px;
+    background: #2b2f30;
+    float: left;
+}
+
+/*Estilos con tenido central*/
+
+#content
+{
+    width: 1212px;
+    min-height: 930px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.box
+{
+    background: white;
+    width: 90%;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;/*Para que las esquinas estén como dobladas, se ve bien*/
+    margin: 0 auto;
+}
+
+.box form
+{
+    width: 40%;
+}
+
+.box form input,
+.box form label
+{
+    display: block;
+    padding: 5px;
+}
+
+.box form input[type="text"],
+.box form textarea,
+.box form select
+{
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 0px;
+}
+
+.box form select
+{
+    width: 100px;
+    padding: 5px;
+}
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button
+{
+    padding: 10px;
+    margin-top: 5px;
+    background: #2ba977;
+    border: 1px solid #444;
+    color: white;
+    transition: 300ms all;
+}
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button:hover
+{
+    cursor: pointer;
+    background: #1f7e58;
+}
+
+.title
+{
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.date
+{
+    display: block;
+    margin-top: 17px;
+    color: gray;
+}
+
+.content
+{
+    line-height: 25px;
+}
+
+footer
+{
+    width: 1250px;
+    background-color: #1b1e1f;
+    border: 1px solid #333;
+    color: #d1d4d6;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 20px gray;
+    margin: 0 auto;
+}
+
+.rojo{
+    color: red;
+}
